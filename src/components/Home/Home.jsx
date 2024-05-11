@@ -33,7 +33,7 @@ export default function Home() {
       <p>Error: {error.message}</p>
     ) : (
       <div className={style.movieContainer}>
-        <h2>Trending today</h2>
+        <h2 className={style.trending}>Trending today</h2>
         <div className={style.movieList}>
           {movies.map(movie => (
               <NavLink

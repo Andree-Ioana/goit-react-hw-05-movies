@@ -1,0 +1,55 @@
+.movieDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.moviePoster {
+    flex: 0 0 300px;
+    /* Stabilim o lățime fixă pentru poster */
+    height: auto;
+}
+
+.movieInfo {
+    flex: 1;
+}
+
+.movieInfo h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movieInfo h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.movieInfo p {
+    margin: 10px 0;
+}
+
+.movieInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.movieInfo ul li {
+    margin-bottom: 5px;
+}
+
+.additionalInfo {
+    margin-top: 20px;
+}
+
+.additionalInfo a {
+    margin-right: 10px;
+    color: #007bff;
+    /* Culoare de legătură */
+    text-decoration: none;
+}
+
+.additionalInfo a:hover {
+    text-decoration: underline;
+    /* Subliniază când se trece cu mouse-ul */
+}

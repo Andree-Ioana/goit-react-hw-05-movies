@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import getMoviesReviews from '../../api/apiMovieReviews';
 import { useParams } from 'react-router-dom';
+import style from './Reviews.module.css';
 
 export default function Reviews() {
   const [reviewMovie, setReviewMovie] = useState([]);
   const [error, setError] = useState(null);
-  const { movie_id } = useParams;
+  const { movie_id } = useParams();
 
   useEffect(() => {
     const reviewsMovie = async () => {
@@ -18,15 +19,18 @@ export default function Reviews() {
     };
     reviewsMovie();
   }, [movie_id]);
+
   if (error) {
     return <p>Error: {error.message}</p>;
   }
 
-    return (
-        <div>
-            {reviewMovie.map(review => (
-                <li key={review.id}>{review.content}</li>
-            ))}
+  return (
+    <div className={style.reviewsContainer}>
+      {reviewMovie.map(review => (
+        <div key={review.id} className={style.reviewItem}>
+          <p className={style.reviewContent}>{review.content}</p>
         </div>
-    );
+      ))}
+    </div>
+  );
 }

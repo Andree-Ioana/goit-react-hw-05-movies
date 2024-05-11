@@ -1,0 +1,31 @@
+.castContainer {
+    padding: 20px;
+}
+
+.castList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.castItem {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.castItem img {
+    border-radius: 20%;
+}
+
+.castParagraf {
+    margin-top: 10px;
+}
+
+.castParagraf p {
+    margin: 5px 0;
+}

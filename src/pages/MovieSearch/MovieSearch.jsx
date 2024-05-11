@@ -29,30 +29,29 @@ export default function MovieSearch() {
     };
 
     return (
-        <div>
+        <div className={style.searchContainer}>
             <input
                 type="text"
                 placeholder="Search for movies..."
                 value={query}
                 onChange={handleInputChange}
+                className={style.searchInput}
             />
-            <button onClick={handleSearchClick}>Search</button> 
+            <button onClick={handleSearchClick} className={style.searchButton}>Search</button> 
             
-            <ul>
+            <ul className={style.movieList}>
                 {movies.map(movie => (
                     <NavLink
                   key={movie.id}
                   to={`/movies/${movie.id}`}
+                  className={style.movieItem}
               >
-                   <div key={movie.id} className={style.movieItem}>
               <img
                 src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                 alt="film"
-                width="300px"
-                height="400px"
+                className={style.moviePoster}
               />
               <p className={style.movieTitle}>{movie.title || 'Title not available'}</p>
-            </div>
            </NavLink>
                 ))}
             </ul>
